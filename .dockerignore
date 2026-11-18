@@ -1,0 +1,9 @@
+.git
+.gitignore
+.DS_Store
+Thumbs.db
+css/
+js/
+openshift-deploy.yaml
+README.md
+*.md

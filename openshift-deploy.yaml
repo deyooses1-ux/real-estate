@@ -1,0 +1,112 @@
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  name: estatesphere
+  labels:
+    app: estatesphere
+spec:
+  lookupPolicy:
+    local: true
+---
+apiVersion: build.openshift.io/v1
+kind: BuildConfig
+metadata:
+  name: estatesphere
+  labels:
+    app: estatesphere
+spec:
+  source:
+    type: Binary
+  strategy:
+    type: Docker
+    dockerStrategy:
+      dockerfilePath: Dockerfile
+  output:
+    to:
+      kind: ImageStreamTag
+      name: estatesphere:latest
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: estatesphere
+  labels:
+    app: estatesphere
+  annotations:
+    image.openshift.io/triggers: '[{"from":{"kind":"ImageStreamTag","name":"estatesphere:latest"},"fieldPath":"spec.template.spec.containers[?(@.name==\"estatesphere\")].image"}]'
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: estatesphere
+  template:
+    metadata:
+      labels:
+        app: estatesphere
+    spec:
+      securityContext:
+        runAsNonRoot: true
+        seccompProfile:
+          type: RuntimeDefault
+      containers:
+        - name: estatesphere
+          image: estatesphere:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+              protocol: TCP
+          securityContext:
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop:
+                - ALL
+          resources:
+            requests:
+              cpu: 50m
+              memory: 64Mi
+            limits:
+              cpu: 250m
+              memory: 192Mi
+          readinessProbe:
+            httpGet:
+              path: /healthz
+              port: 8080
+            initialDelaySeconds: 5
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /healthz
+              port: 8080
+            initialDelaySeconds: 10
+            periodSeconds: 20
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: estatesphere
+  labels:
+    app: estatesphere
+spec:
+  ports:
+    - name: http
+      port: 8080
+      targetPort: 8080
+      protocol: TCP
+  selector:
+    app: estatesphere
+---
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: estatesphere
+  labels:
+    app: estatesphere
+spec:
+  to:
+    kind: Service
+    name: estatesphere
+  port:
+    targetPort: http
+  tls:
+    termination: edge
+    insecureEdgeTerminationPolicy: Redirect
