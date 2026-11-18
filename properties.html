@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Property Gallery — All International Residences | EstateSphere</title>
+  <meta name="description" content="Explore EstateSphere's complete gallery of international apartments, flats, villas, penthouses, duplexes, and residential complexes.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="properties">
+  <div id="site-header-mount"></div>
+
+  <main>
+    <section class="page-hero">
+      <div class="page-hero-bg">
+        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80" alt="Luxury architectural residential facade">
+      </div>
+      <div class="page-hero-scrim"></div>
+      <div class="container page-hero-content">
+        <nav class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>Properties</span></nav>
+        <span class="eyebrow eyebrow--light">Complete Portfolio</span>
+        <h1 class="page-hero-title">International Property Gallery</h1>
+        <p class="page-hero-desc">Filter across 10 residential categories and 12 global markets. Every listing transparently presents total asking price, down payment, remaining balance, and comparison tools.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="filter-shell">
+          <div class="category-pills" id="gallery-category-pills" aria-label="Property Categories"></div>
+
+          <div class="filter-grid">
+            <div class="field-group">
+              <label class="field-label" for="filter-q">Search Keyword / ID</label>
+              <input id="filter-q" type="text" class="field-input" placeholder="City, title, or EST-ID...">
+            </div>
+
+            <div class="field-group">
+              <label class="field-label" for="filter-country">Country</label>
+              <select id="filter-country" class="field-select"><option value="">All Countries</option></select>
+            </div>
+
+            <div class="field-group">
+              <label class="field-label" for="filter-city">City</label>
+              <select id="filter-city" class="field-select"><option value="">All Cities</option></select>
+            </div>
+
+            <div class="field-group">
+              <label class="field-label" for="filter-beds">Bedrooms</label>
+              <select id="filter-beds" class="field-select">
+                <option value="">Any Bedrooms</option>
+                <option value="1">1+ Bedroom</option>
+                <option value="2">2+ Bedrooms</option>
+                <option value="3">3+ Bedrooms</option>
+                <option value="4">4+ Bedrooms</option>
+                <option value="5">5+ Bedrooms</option>
+              </select>
+            </div>
+
+            <div class="field-group">
+              <label class="field-label" for="filter-price">Price Range (USD Ref.)</label>
+              <select id="filter-price" class="field-select">
+                <option value="">Any Price</option>
+                <option value="under-400k">Under $400,000</option>
+                <option value="400k-1m">$400,000 – $1,000,000</option>
+                <option value="1m-2.5m">$1,000,000 – $2,500,000</option>
+                <option value="over-2.5m">Above $2,500,000</option>
+              </select>
+            </div>
+          </div>
+
+          <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:0.85rem;margin-top:1rem;padding-top:1rem;border-top:1px solid var(--border-subtle);">
+            <div style="display:flex;flex-wrap:wrap;gap:0.75rem;align-items:center;">
+              <label class="field-label" for="filter-status">Availability:</label>
+              <select id="filter-status" class="field-select" style="width:auto;min-height:38px;padding:0.4rem 0.75rem;">
+                <option value="">All Statuses</option>
+                <option value="Ready to Move">Ready to Move</option>
+                <option value="Under Construction">Under Construction</option>
+                <option value="New Construction">New Construction</option>
+              </select>
+            </div>
+
+            <div style="display:flex;flex-wrap:wrap;gap:0.65rem;">
+              <button type="button" class="btn btn--outline btn--sm" id="btn-save-search">Save Search</button>
+              <button type="button" class="btn btn--ghost btn--sm" id="btn-reset-filters">Reset Filters</button>
+            </div>
+          </div>
+
+          <div class="history-strip" id="search-history-strip" style="display:none;"></div>
+        </div>
+
+        <div class="filter-toolbar">
+          <div class="results-count" id="properties-count">Loading properties...</div>
+          <div class="toolbar-controls">
+            <label class="field-label" for="filter-sort">Sort By:</label>
+            <select id="filter-sort" class="field-select" style="width:auto;min-height:40px;padding:0.45rem 0.85rem;">
+              <option value="featured">Featured First</option>
+              <option value="price-asc">Price: Low to High</option>
+              <option value="price-desc">Price: High to Low</option>
+              <option value="area-desc">Largest Built-Up Area</option>
+              <option value="yield-desc">Highest Est. Yield</option>
+              <option value="newest">Newest Construction</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="property-grid" id="properties-grid"></div>
+      </div>
+    </section>
+
+    <section class="section section--beige" id="recently-viewed-section" style="display:none;">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="eyebrow">Your Browsing History</span>
+            <h2 class="section-title">Recently Viewed Residences</h2>
+          </div>
+          <a href="account.html#recent" class="link-arrow">Manage History &#8594;</a>
+        </div>
+        <div class="property-grid" id="recently-viewed-grid"></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer-mount"></div>
+
+  <script src="data.js"></script>
+  <script src="state.js"></script>
+  <script src="components.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

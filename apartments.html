@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>International Apartments for Sale | EstateSphere</title>
+  <meta name="description" content="Explore luxury, ready-to-move, new construction, and furnished apartments across Dubai, London, New York, Singapore, Paris, Tokyo, and more.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="apartments">
+  <div id="site-header-mount"></div>
+
+  <main>
+    <section class="page-hero">
+      <div class="page-hero-bg">
+        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1600&q=80" alt="Luxury residential apartment tower architecture">
+      </div>
+      <div class="page-hero-scrim"></div>
+      <div class="container page-hero-content">
+        <nav class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>Apartments</span></nav>
+        <span class="eyebrow eyebrow--light">Global Urban Living</span>
+        <h1 class="page-hero-title">Apartments Across Premier Cities</h1>
+        <p class="page-hero-desc">Filter international apartments by country, city, size, bedrooms, bathrooms, furnishing, and construction phase — with transparent total pricing and down payment details on every residence.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="filter-shell">
+          <div class="category-pills" aria-label="Apartment Status & Tier">
+            <button type="button" class="pill-btn js-apt-tier is-active" data-tier="all">All Apartments</button>
+            <button type="button" class="pill-btn js-apt-tier" data-tier="ready">Ready to Move</button>
+            <button type="button" class="pill-btn js-apt-tier" data-tier="under">Under Construction</button>
+            <button type="button" class="pill-btn js-apt-tier" data-tier="new">New Construction</button>
+            <button type="button" class="pill-btn js-apt-tier" data-tier="luxury">Luxury Apartments</button>
+          </div>
+
+          <div class="filter-grid filter-grid--4" style="margin-bottom:0.9rem;">
+            <div class="field-group">
+              <label class="field-label" for="apt-country">Country</label>
+              <select id="apt-country" class="field-select"><option value="">All Countries</option></select>
+            </div>
+            <div class="field-group">
+              <label class="field-label" for="apt-city">City</label>
+              <select id="apt-city" class="field-select"><option value="">All Cities</option></select>
+            </div>
+            <div class="field-group">
+              <label class="field-label" for="apt-price">Price Range (USD Ref.)</label>
+              <select id="apt-price" class="field-select">
+                <option value="">Any Price</option>
+                <option value="under-400k">Under $400,000</option>
+                <option value="400k-1m">$400,000 – $1,000,000</option>
+                <option value="1m-2.5m">$1,000,000 – $2,500,000</option>
+                <option value="over-2.5m">Above $2,500,000</option>
+              </select>
+            </div>
+            <div class="field-group">
+              <label class="field-label" for="apt-furnished">Furnishing</label>
+              <select id="apt-furnished" class="field-select">
+                <option value="">Furnished &amp; Unfurnished</option>
+                <option value="Furnished">Fully Furnished</option>
+                <option value="Semi-Furnished">Semi-Furnished</option>
+                <option value="Unfurnished">Unfurnished</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="filter-grid filter-grid--4">
+            <div class="field-group">
+              <label class="field-label" for="apt-beds">Bedrooms</label>
+              <select id="apt-beds" class="field-select">
+                <option value="">Any Bedrooms</option>
+                <option value="1">1+ Bedroom</option>
+                <option value="2">2+ Bedrooms</option>
+                <option value="3">3+ Bedrooms</option>
+                <option value="4">4+ Bedrooms</option>
+              </select>
+            </div>
+            <div class="field-group">
+              <label class="field-label" for="apt-baths">Bathrooms</label>
+              <select id="apt-baths" class="field-select">
+                <option value="">Any Bathrooms</option>
+                <option value="1">1+ Bathroom</option>
+                <option value="2">2+ Bathrooms</option>
+                <option value="3">3+ Bathrooms</option>
+                <option value="4">4+ Bathrooms</option>
+              </select>
+            </div>
+            <div class="field-group">
+              <label class="field-label" for="apt-size">Apartment Size</label>
+              <select id="apt-size" class="field-select">
+                <option value="">Any Size</option>
+                <option value="under-1000">Under 1,000 sq ft</option>
+                <option value="1000-2000">1,000 – 2,000 sq ft</option>
+                <option value="over-2000">Over 2,000 sq ft</option>
+              </select>
+            </div>
+            <div class="field-group">
+              <label class="field-label">&nbsp;</label>
+              <button type="button" class="btn btn--outline btn--block" id="apt-reset">Reset Apartment Filters</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="filter-toolbar">
+          <div class="results-count" id="apartments-count">Loading apartments...</div>
+          <div class="toolbar-controls">
+            <label class="field-label" for="apt-sort">Sort:</label>
+            <select id="apt-sort" class="field-select" style="width:auto;min-height:40px;">
+              <option value="featured">Featured First</option>
+              <option value="price-asc">Price: Low to High</option>
+              <option value="price-desc">Price: High to Low</option>
+              <option value="area-desc">Largest Size</option>
+              <option value="newest">Newest Year</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="property-grid" id="apartments-grid"></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer-mount"></div>
+
+  <script src="data.js"></script>
+  <script src="state.js"></script>
+  <script src="components.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

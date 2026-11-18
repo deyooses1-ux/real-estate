@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>List Your Property With EstateSphere | International Luxury Realty</title>
+  <meta name="description" content="Submit your apartment, flat, villa, or penthouse to EstateSphere's global luxury residential showcase.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="list-property">
+  <div id="site-header-mount"></div>
+
+  <main>
+    <section class="page-hero">
+      <div class="page-hero-bg">
+        <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1600&q=80" alt="Luxury modern architectural estate exterior">
+      </div>
+      <div class="page-hero-scrim"></div>
+      <div class="container page-hero-content">
+        <nav class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>List Your Property</span></nav>
+        <span class="eyebrow eyebrow--light">Owner &amp; Agent Submissions</span>
+        <h1 class="page-hero-title">Present Your Residence to the World</h1>
+        <p class="page-hero-desc">Submit apartments, flats, villas, and penthouses for inclusion in the EstateSphere portfolio. Demo submissions are saved locally in your browser and clearly labeled as <strong>Awaiting Verification</strong>.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="split-form">
+          <div class="form-card">
+            <span class="eyebrow">Property Submission Dossier</span>
+            <h2 style="font-size:2rem;margin-bottom:0.5rem;">Submit a Property Listing</h2>
+            <p style="font-size:0.9rem;color:var(--ink-secondary);margin-bottom:1.5rem;">All pricing and down payment entries are automatically validated for mathematical accuracy. Submitted demo listings are stored in browser <code>localStorage</code> and tagged as <strong>Awaiting Verification</strong>.</p>
+
+            <form id="list-property-form" style="display:flex;flex-direction:column;gap:1.1rem;" novalidate>
+              <h3 style="font-size:1.3rem;padding-bottom:0.4rem;border-bottom:1px solid var(--border-subtle);">1. Owner or Agent Information</h3>
+              <div class="form-grid-3">
+                <div class="field-group">
+                  <label class="field-label" for="lp-owner">Owner / Agent Name *</label>
+                  <input id="lp-owner" type="text" class="field-input" placeholder="Full Name" required>
+                </div>
+                <div class="field-group">
+                  <label class="field-label" for="lp-email">Email Address *</label>
+                  <input id="lp-email" type="email" class="field-input" placeholder="owner@example.com" required>
+                </div>
+                <div class="field-group">
+                  <label class="field-label" for="lp-phone">Phone Number *</label>
+                  <input id="lp-phone" type="tel" class="field-input" placeholder="+971 / +44 / +1 ..." required>
+                </div>
+              </div>
+
+              <h3 style="font-size:1.3rem;padding-bottom:0.4rem;border-bottom:1px solid var(--border-subtle);margin-top:0.5rem;">2. Property Location &amp; Overview</h3>
+              <div class="form-grid-3">
+                <div class="field-group">
+                  <label class="field-label" for="lp-country">Country *</label>
+                  <select id="lp-country" class="field-select"></select>
+                </div>
+                <div class="field-group">
+                  <label class="field-label" for="lp-city">City *</label>
+                  <input id="lp-city" type="text" class="field-input" placeholder="e.g. Dubai, London, Mumbai" required>
+                </div>
+                <div class="field-group">
+                  <label class="field-label" for="lp-type">Property Type *</label>
+                  <select id="lp-type" class="field-select">
+                    <option value="Apartment">Apartment</option>
+                    <option value="Luxury Apartment">Luxury Apartment</option>
+                    <option value="Flat">Flat</option>
+                    <option value="Studio Apartment">Studio Apartment</option>
+                    <option value="Villa">Villa</option>
+                    <option value="Penthouse">Penthouse</option>
+                    <option value="Duplex Apartment">Duplex Apartment</option>
+                    <option value="Residential Complex">Residential Complex</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-grid-2">
+                <div class="field-group">
+                  <label class="field-label" for="lp-title">Property Title *</label>
+                  <input id="lp-title" type="text" class="field-input" placeholder="e.g. Palm Horizon Limestone Residence" required>
+                </div>
+                <div class="field-group">
+                  <label class="field-label" for="lp-address">Full Property Address *</label>
+                  <input id="lp-address" type="text" class="field-input" placeholder="Street, District, Building Name" required>
+                </div>
+              </div>
+
+              <div class="field-group">
+                <label class="field-label" for="lp-desc">Property Description *</label>
+                <textarea id="lp-desc" class="field-textarea" placeholder="Describe architectural finishes, views, natural light, and neighborhood highlights..." required></textarea>
+              </div>
+
+              <h3 style="font-size:1.3rem;padding-bottom:0.4rem;border-bottom:1px solid var(--border-subtle);margin-top:0.5rem;">3. Pricing, Down Payment &amp; Specifications</h3>
+              <div class="form-grid-3">
+                <div class="field-group">
+                  <label class="field-label" for="lp-price">Total Property Price (USD) *</label>
+                  <input id="lp-price" type="number" class="field-input tabular-nums" value="450000" min="20000" step="5000" required>
+                </div>
+                <div class="field-group">
+                  <label class="field-label" for="lp-downpayment">Required Down Payment (USD) *</label>
+                  <input id="lp-downpayment" type="number" class="field-input tabular-nums" value="90000" min="1000" step="1000" required>
+                </div>
+                <div class="field-group">
+                  <label class="field-label" for="lp-status">Availability Status *</label>
+                  <select id="lp-status" class="field-select">
+                    <option value="Ready to Move">Ready to Move</option>
+                    <option value="Under Construction">Under Construction</option>
+                    <option value="New Construction">New Construction</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="price-ledger" style="margin-bottom:0;">
+                <div class="price-ledger-split" id="lp-math-preview" style="grid-template-columns:repeat(3,1fr);"></div>
+              </div>
+
+              <div class="form-grid-3">
+                <div class="field-group">
+                  <label class="field-label" for="lp-beds">Bedrooms *</label>
+                  <input id="lp-beds" type="number" class="field-input" value="2" min="1" max="15" required>
+                </div>
+                <div class="field-group">
+                  <label class="field-label" for="lp-baths">Bathrooms *</label>
+                  <input id="lp-baths" type="number" class="field-input" value="2" min="1" max="15" required>
+                </div>
+                <div class="field-group">
+                  <label class="field-label" for="lp-area">Built-Up Area (sq ft) *</label>
+                  <input id="lp-area" type="number" class="field-input" value="1450" min="250" step="50" required>
+                </div>
+              </div>
+
+              <h3 style="font-size:1.3rem;padding-bottom:0.4rem;border-bottom:1px solid var(--border-subtle);margin-top:0.5rem;">4. Amenities &amp; Photographs</h3>
+              <div class="checkbox-grid">
+                <label class="checkbox-chip"><input type="checkbox" name="lp-amenities" value="Swimming Pool" checked> Swimming Pool</label>
+                <label class="checkbox-chip"><input type="checkbox" name="lp-amenities" value="Fitness Gym" checked> Fitness Gym</label>
+                <label class="checkbox-chip"><input type="checkbox" name="lp-amenities" value="24/7 Security" checked> 24/7 Security</label>
+                <label class="checkbox-chip"><input type="checkbox" name="lp-amenities" value="Covered Parking" checked> Covered Parking</label>
+                <label class="checkbox-chip"><input type="checkbox" name="lp-amenities" value="Landscaped Garden"> Landscaped Garden</label>
+                <label class="checkbox-chip"><input type="checkbox" name="lp-amenities" value="High-Speed Lift" checked> High-Speed Lift</label>
+                <label class="checkbox-chip"><input type="checkbox" name="lp-amenities" value="CCTV Surveillance" checked> CCTV Surveillance</label>
+                <label class="checkbox-chip"><input type="checkbox" name="lp-amenities" value="Children's Play Area"> Children's Play Area</label>
+                <label class="checkbox-chip"><input type="checkbox" name="lp-amenities" value="Private Clubhouse"> Private Clubhouse</label>
+                <label class="checkbox-chip"><input type="checkbox" name="lp-amenities" value="Power Backup" checked> Power Backup</label>
+              </div>
+
+              <div class="form-grid-2">
+                <div class="field-group">
+                  <label class="field-label" for="lp-photo-url">Primary Photograph URL (Optional)</label>
+                  <input id="lp-photo-url" type="url" class="field-input" placeholder="https://images.unsplash.com/...">
+                </div>
+                <div class="field-group">
+                  <label class="field-label" for="lp-photo-file">Or Upload Local Photograph (Demo Preview)</label>
+                  <input id="lp-photo-file" type="file" accept="image/*" class="field-input" style="padding:0.55rem;">
+                </div>
+              </div>
+
+              <div class="field-error" id="lp-error"></div>
+              <button type="submit" class="btn btn--primary btn--lg">Submit Property</button>
+            </form>
+          </div>
+
+          <aside class="sticky-sidebar">
+            <div class="detail-panel" style="margin-bottom:0;">
+              <span class="eyebrow">Verification Standards</span>
+              <h3>Why List With EstateSphere?</h3>
+              <p style="font-size:0.9rem;color:var(--ink-secondary);margin-bottom:1rem;">Every residence submitted to our network undergoes architectural documentation checks, title verification coordination, and pricing review prior to global syndication.</p>
+              <ul style="display:flex;flex-direction:column;gap:0.65rem;font-size:0.88rem;color:var(--ink-primary);">
+                <li>&#10003; Multi-currency presentation across 9 major currencies</li>
+                <li>&#10003; Automatic down payment &amp; remaining balance transparency</li>
+                <li>&#10003; Qualified international buyers across 12 markets</li>
+                <li>&#10003; Dedicated private viewing &amp; valuation support</li>
+              </ul>
+            </div>
+
+            <div class="disclaimer-box">
+              <strong>Demo Storage Notice:</strong> Because EstateSphere runs purely in HTML5, CSS3, and Vanilla JavaScript, submitted listings are saved in your local browser storage and displayed immediately with an <strong>Awaiting Verification</strong> status badge.
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--beige">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="eyebrow">Local Demo Submissions</span>
+            <h2 class="section-title">Your Submitted Listings (Awaiting Verification)</h2>
+            <p class="section-subtitle">Any property you submit appears below and is also browseable inside the Property Gallery and Recently Added sections.</p>
+          </div>
+          <a href="properties.html" class="link-arrow">View in Property Gallery &#8594;</a>
+        </div>
+        <div class="property-grid" id="submitted-listings-grid"></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer-mount"></div>
+
+  <script src="data.js"></script>
+  <script src="state.js"></script>
+  <script src="components.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

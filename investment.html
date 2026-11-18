@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Real Estate Investment Opportunities &amp; Yield Calculator | EstateSphere</title>
+  <meta name="description" content="Explore international residential investment properties, rental apartments, new developments, under-construction opportunities, and our interactive investment estimator.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="investment">
+  <div id="site-header-mount"></div>
+
+  <main>
+    <section class="page-hero">
+      <div class="page-hero-bg">
+        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80" alt="Contemporary glass residential investment towers">
+      </div>
+      <div class="page-hero-scrim"></div>
+      <div class="container page-hero-content">
+        <nav class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>Investment</span></nav>
+        <span class="eyebrow eyebrow--light">Global Portfolio Strategy</span>
+        <h1 class="page-hero-title">International Property Investment Opportunities</h1>
+        <p class="page-hero-desc">Evaluate residential investment properties, turnkey rental flats, luxury apartments, and new developments across high-demand international cities.</p>
+      </div>
+    </section>
+
+    <section class="section section--compact">
+      <div class="container">
+        <div class="disclaimer-box">
+          <strong>Investment Risk &amp; Estimate Notice:</strong> Rental yields, expected rental income, and capital appreciation figures presented on EstateSphere are <strong>illustrative market estimates only and are not guaranteed returns</strong>. Real estate values and rental demand fluctuate by economic cycle, currency movement, taxation, and local regulations.
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--compact">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="eyebrow">Curated Yield Portfolio</span>
+            <h2 class="section-title">Selected Investment Residences</h2>
+          </div>
+          <a href="#inv-calculator" class="link-arrow">Jump to Investment Calculator &#8595;</a>
+        </div>
+
+        <div class="category-pills" style="border-bottom:none;margin-bottom:1.75rem;" aria-label="Investment Categories">
+          <button type="button" class="pill-btn js-inv-cat is-active" data-cat="All">All Investment Properties</button>
+          <button type="button" class="pill-btn js-inv-cat" data-cat="Residential Investment Properties">Residential Investment</button>
+          <button type="button" class="pill-btn js-inv-cat" data-cat="Rental Properties">Rental Properties</button>
+          <button type="button" class="pill-btn js-inv-cat" data-cat="Luxury Investment Apartments">Luxury Investment Apartments</button>
+          <button type="button" class="pill-btn js-inv-cat" data-cat="New Developments">New Developments</button>
+          <button type="button" class="pill-btn js-inv-cat" data-cat="Under-Construction Properties">Under-Construction</button>
+        </div>
+
+        <div class="property-grid" id="investment-grid"></div>
+      </div>
+    </section>
+
+    <section class="section section--beige" id="inv-calculator">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="eyebrow">Return Modeling Tool</span>
+            <h2 class="section-title">Interactive Investment Return Estimator</h2>
+            <p class="section-subtitle">Model acquisition price, down payment equity, estimated gross rental yield, annual maintenance costs, and appreciation horizon.</p>
+          </div>
+        </div>
+        <div id="investment-calculator-mount"></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer-mount"></div>
+
+  <script src="data.js"></script>
+  <script src="state.js"></script>
+  <script src="components.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

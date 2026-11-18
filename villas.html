@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luxury Villas &amp; Penthouses Worldwide | EstateSphere</title>
+  <meta name="description" content="Discover private limestone villas, waterfront estates, and skyline penthouses across Cannes, Lake Como, Sydney, New York, Vancouver, and Abu Dhabi.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="villas">
+  <div id="site-header-mount"></div>
+
+  <main>
+    <section class="page-hero">
+      <div class="page-hero-bg">
+        <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1600&q=80" alt="Luxury architectural villa with infinity pool">
+      </div>
+      <div class="page-hero-scrim"></div>
+      <div class="container page-hero-content">
+        <nav class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>Villas</span></nav>
+        <span class="eyebrow eyebrow--light">Private Estates &amp; Sky Residences</span>
+        <h1 class="page-hero-title">Villas &amp; Signature Penthouses</h1>
+        <p class="page-hero-desc">Architectural sanctuary homes overlooking the Mediterranean, Lake Como, Sydney Harbour, Abu Dhabi’s Saadiyat coast, and Manhattan’s skyline.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="filter-shell">
+          <div class="category-pills" aria-label="Estate Type">
+            <button type="button" class="pill-btn js-villa-type is-active" data-type="All">All Villas &amp; Penthouses</button>
+            <button type="button" class="pill-btn js-villa-type" data-type="Villa">Private Villas</button>
+            <button type="button" class="pill-btn js-villa-type" data-type="Penthouse">Sky Penthouses</button>
+          </div>
+
+          <div class="filter-grid filter-grid--4">
+            <div class="field-group">
+              <label class="field-label" for="villa-country">Country</label>
+              <select id="villa-country" class="field-select"><option value="">All Countries</option></select>
+            </div>
+            <div class="field-group">
+              <label class="field-label" for="villa-beds">Minimum Bedrooms</label>
+              <select id="villa-beds" class="field-select">
+                <option value="">Any Bedrooms</option>
+                <option value="3">3+ Bedrooms</option>
+                <option value="4">4+ Bedrooms</option>
+                <option value="5">5+ Bedrooms</option>
+              </select>
+            </div>
+            <div class="field-group">
+              <label class="field-label" for="villa-sort">Sort By</label>
+              <select id="villa-sort" class="field-select">
+                <option value="price-desc">Price: High to Low</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="area-desc">Largest Built-Up Area</option>
+              </select>
+            </div>
+            <div class="field-group">
+              <label class="field-label">&nbsp;</label>
+              <a href="contact.html" class="btn btn--outline btn--block">Request Private Dossier</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="filter-toolbar">
+          <div class="results-count" id="villas-count">Loading estates...</div>
+          <a href="properties.html" class="link-arrow">View Full Property Gallery &#8594;</a>
+        </div>
+
+        <div class="property-grid" id="villas-grid"></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer-mount"></div>
+
+  <script src="data.js"></script>
+  <script src="state.js"></script>
+  <script src="components.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>International Flats — Affordable, Family, Studio &amp; Luxury Flats | EstateSphere</title>
+  <meta name="description" content="Explore affordable flats, premium flats, luxury flats, family flats, studio flats, fully furnished and unfurnished flats worldwide.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="flats">
+  <div id="site-header-mount"></div>
+
+  <main>
+    <section class="page-hero">
+      <div class="page-hero-bg">
+        <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1600&q=80" alt="Minimalist sunlit luxury flat interior">
+      </div>
+      <div class="page-hero-scrim"></div>
+      <div class="container page-hero-content">
+        <nav class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>Flats</span></nav>
+        <span class="eyebrow eyebrow--light">Curated Flat Collection</span>
+        <h1 class="page-hero-title">Flats Tailored to Every Lifestyle</h1>
+        <p class="page-hero-desc">Browse affordable, premium, luxury, family, studio, fully furnished, and unfurnished flats across leading international residential neighborhoods.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="filter-shell">
+          <div class="category-pills" aria-label="Flat Categories">
+            <button type="button" class="pill-btn js-flat-tier is-active" data-tier="All Flats">All Flats</button>
+            <button type="button" class="pill-btn js-flat-tier" data-tier="Affordable Flats">Affordable Flats</button>
+            <button type="button" class="pill-btn js-flat-tier" data-tier="Premium Flats">Premium Flats</button>
+            <button type="button" class="pill-btn js-flat-tier" data-tier="Luxury Flats">Luxury Flats</button>
+            <button type="button" class="pill-btn js-flat-tier" data-tier="Family Flats">Family Flats</button>
+            <button type="button" class="pill-btn js-flat-tier" data-tier="Studio Flats">Studio Flats</button>
+            <button type="button" class="pill-btn js-flat-tier" data-tier="Fully Furnished Flats">Fully Furnished Flats</button>
+            <button type="button" class="pill-btn js-flat-tier" data-tier="Unfurnished Flats">Unfurnished Flats</button>
+          </div>
+
+          <div class="filter-grid filter-grid--4">
+            <div class="field-group">
+              <label class="field-label" for="flat-country">Country</label>
+              <select id="flat-country" class="field-select"><option value="">All Countries</option></select>
+            </div>
+            <div class="field-group">
+              <label class="field-label" for="flat-beds">Bedrooms</label>
+              <select id="flat-beds" class="field-select">
+                <option value="">Any Bedrooms</option>
+                <option value="1">1+ Bedroom</option>
+                <option value="2">2+ Bedrooms</option>
+                <option value="3">3+ Bedrooms</option>
+              </select>
+            </div>
+            <div class="field-group">
+              <label class="field-label" for="flat-price">Price Range (USD Ref.)</label>
+              <select id="flat-price" class="field-select">
+                <option value="">Any Price</option>
+                <option value="under-400k">Under $400,000</option>
+                <option value="400k-1m">$400,000 – $1,000,000</option>
+                <option value="1m-2.5m">$1,000,000 – $2,500,000</option>
+              </select>
+            </div>
+            <div class="field-group">
+              <label class="field-label" for="flat-sort">Sort By</label>
+              <select id="flat-sort" class="field-select">
+                <option value="featured">Featured</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+                <option value="area-desc">Largest Area</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="filter-toolbar">
+          <div class="results-count" id="flats-count">Loading flats...</div>
+          <a href="financing.html" class="link-arrow">Estimate Down Payment &amp; Installments &#8594;</a>
+        </div>
+
+        <div class="property-grid" id="flats-grid"></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer-mount"></div>
+
+  <script src="data.js"></script>
+  <script src="state.js"></script>
+  <script src="components.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

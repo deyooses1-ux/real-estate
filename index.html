@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EstateSphere — Discover Your Place in the World | Luxury International Real Estate</title>
+  <meta name="description" content="Discover exceptional apartments, flats, villas, penthouses, and luxury residences across the world's most desirable destinations with EstateSphere.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="home">
+  <div id="site-header-mount"></div>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero" aria-label="Hero Showcase">
+      <div class="hero-bg">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=85" alt="Contemporary limestone luxury architectural residence">
+        <div class="hero-scrim"></div>
+      </div>
+
+      <div class="container hero-content">
+        <div class="hero-top">
+          <span class="eyebrow eyebrow--light">International Luxury Real Estate · 12 Global Markets</span>
+          <h1 class="hero-title">Find a Home Beyond Expectations.</h1>
+          <p class="hero-description">Discover exceptional apartments, flats, and luxury residences in the world's most desirable destinations.</p>
+          <div class="hero-cta-group">
+            <a href="properties.html" class="btn btn--gold btn--lg">Explore Properties</a>
+            <a href="list-property.html" class="btn btn--outline-light btn--lg">List Your Property</a>
+          </div>
+        </div>
+
+        <div class="hero-metrics">
+          <div>
+            <div class="hero-metric-val">12+</div>
+            <div class="hero-metric-label">Premier Countries</div>
+          </div>
+          <div>
+            <div class="hero-metric-val">24+</div>
+            <div class="hero-metric-label">Curated Residences</div>
+          </div>
+          <div>
+            <div class="hero-metric-val">9</div>
+            <div class="hero-metric-label">Live &amp; Reference Currencies</div>
+          </div>
+          <div>
+            <div class="hero-metric-val">100%</div>
+            <div class="hero-metric-label">Transparent Down Payment Schedules</div>
+          </div>
+        </div>
+
+        <!-- ADVANCED PROPERTY SEARCH PANEL -->
+        <div class="search-panel" role="search" aria-label="Advanced Property Search">
+          <div class="search-panel-header">
+            <div class="search-panel-tabs">
+              <button type="button" class="search-tab js-hero-tab is-active" data-status="">All Residences</button>
+              <button type="button" class="search-tab js-hero-tab" data-status="Ready to Move">Ready to Move</button>
+              <button type="button" class="search-tab js-hero-tab" data-status="Under Construction">Under Construction</button>
+              <button type="button" class="search-tab js-hero-tab" data-status="New Construction">New Construction</button>
+            </div>
+            <a href="financing.html" class="link-arrow" style="font-size:0.72rem;">Down Payment Calculator &#8594;</a>
+          </div>
+
+          <form id="hero-search-form" class="search-grid">
+            <div class="field-group">
+              <label class="field-label" for="hero-keyword">Destination, City or Property ID</label>
+              <input id="hero-keyword" type="text" class="field-input" placeholder="Dubai, London, Tribeca, EST-DXB-101...">
+            </div>
+
+            <div class="field-group">
+              <label class="field-label" for="hero-country">Country</label>
+              <select id="hero-country" class="field-select">
+                <option value="">All Countries</option>
+              </select>
+            </div>
+
+            <div class="field-group">
+              <label class="field-label" for="hero-category">Category</label>
+              <select id="hero-category" class="field-select">
+                <option value="">All Categories</option>
+                <option value="Apartments">Apartments</option>
+                <option value="Flats">Flats</option>
+                <option value="Luxury Apartments">Luxury Apartments</option>
+                <option value="Studio Apartments">Studio Apartments</option>
+                <option value="Villas">Villas</option>
+                <option value="Penthouses">Penthouses</option>
+                <option value="Duplex Apartments">Duplex Apartments</option>
+                <option value="Residential Complexes">Residential Complexes</option>
+              </select>
+            </div>
+
+            <div class="field-group">
+              <label class="field-label" for="hero-beds">Bedrooms</label>
+              <select id="hero-beds" class="field-select">
+                <option value="">Any Beds</option>
+                <option value="1">1+ Bedroom</option>
+                <option value="2">2+ Bedrooms</option>
+                <option value="3">3+ Bedrooms</option>
+                <option value="4">4+ Bedrooms</option>
+                <option value="5">5+ Bedrooms</option>
+              </select>
+            </div>
+
+            <div class="field-group">
+              <label class="field-label" for="hero-price">Price Tier (USD Ref.)</label>
+              <select id="hero-price" class="field-select">
+                <option value="">Any Budget</option>
+                <option value="under-400k">Under $400,000</option>
+                <option value="400k-1m">$400,000 – $1,000,000</option>
+                <option value="1m-2.5m">$1,000,000 – $2,500,000</option>
+                <option value="over-2.5m">Above $2,500,000</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn btn--primary" style="min-height:44px;">Search</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- A. FEATURED PROPERTIES -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="eyebrow">01 · Curated Signature Portfolio</span>
+            <h2 class="section-title">Featured Properties</h2>
+            <p class="section-subtitle">Handpicked architectural residences with complete total pricing, required down payment breakdowns, and remaining balances.</p>
+          </div>
+          <a href="properties.html" class="link-arrow">View All Properties &#8594;</a>
+        </div>
+        <div class="property-grid" id="home-featured-grid"></div>
+      </div>
+    </section>
+
+    <!-- B. RECENTLY ADDED PROPERTIES -->
+    <section class="section section--beige">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="eyebrow">02 · Latest Arrivals</span>
+            <h2 class="section-title">Recently Added Properties</h2>
+            <p class="section-subtitle">Newly introduced residences and newly submitted international listings entering the EstateSphere collection.</p>
+          </div>
+          <a href="list-property.html" class="link-arrow">Submit Your Property &#8594;</a>
+        </div>
+        <div class="property-grid" id="home-recent-grid"></div>
+      </div>
+    </section>
+
+    <!-- C. EXPLORE PROPERTIES BY COUNTRY -->
+    <section class="section section--white">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="eyebrow">03 · Global Reach</span>
+            <h2 class="section-title">Explore Properties by Country</h2>
+            <p class="section-subtitle">From Dubai’s sky towers and London’s Kensington terraces to Lake Como villas and Singapore sky duplexes.</p>
+          </div>
+          <a href="locations.html" class="link-arrow">All 12 Global Destinations &#8594;</a>
+        </div>
+        <div class="country-grid" id="home-countries-grid"></div>
+      </div>
+    </section>
+
+    <!-- D. LUXURY LIVING COLLECTION -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="eyebrow">04 · Architectural Distinction</span>
+            <h2 class="section-title">Luxury Living Collection</h2>
+            <p class="section-subtitle">Bespoke residential tiers tailored for discerning homeowners and international collectors.</p>
+          </div>
+          <a href="villas.html" class="link-arrow">Explore Villas &amp; Penthouses &#8594;</a>
+        </div>
+
+        <div class="collection-grid">
+          <article class="collection-card collection-card--tall">
+            <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1300&q=85" alt="Coastal limestone luxury villa">
+            <div class="collection-card-overlay">
+              <span class="eyebrow eyebrow--light">Private Estates</span>
+              <h3>Architectural Villas</h3>
+              <p>Limestone sanctuaries across Cannes, Lake Como, Sydney Harbour, and Saadiyat Island with private infinity pools.</p>
+              <a href="villas.html" class="btn btn--outline-light btn--sm">Discover Villas</a>
+            </div>
+          </article>
+
+          <div class="collection-stack">
+            <article class="collection-card">
+              <img src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1100&q=85" alt="Skyline glass penthouse">
+              <div class="collection-card-overlay">
+                <span class="eyebrow eyebrow--light">Skyline Living</span>
+                <h3>Penthouses &amp; Duplexes</h3>
+                <p>Full-floor residences in New York, Singapore, Vancouver, and Gurugram with panoramic terraces.</p>
+                <a href="properties.html?category=Penthouses" class="btn btn--outline-light btn--sm">Explore Penthouses</a>
+              </div>
+            </article>
+
+            <article class="collection-card">
+              <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1100&q=85" alt="Curated international flats">
+              <div class="collection-card-overlay">
+                <span class="eyebrow eyebrow--light">Turnkey Urban Homes</span>
+                <h3>Curated City Flats</h3>
+                <p>Affordable, family, studio, and luxury flats ready for immediate occupancy across world capitals.</p>
+                <a href="flats.html" class="btn btn--outline-light btn--sm">Explore Flats</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- E. POPULAR APARTMENTS -->
+    <section class="section section--beige">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="eyebrow">05 · Urban Residences</span>
+            <h2 class="section-title">Popular Apartments</h2>
+            <p class="section-subtitle">Highly sought-after contemporary apartments featuring prime connectivity and transparent payment terms.</p>
+          </div>
+          <a href="apartments.html" class="link-arrow">Browse All Apartments &#8594;</a>
+        </div>
+        <div class="property-grid" id="home-apartments-grid"></div>
+      </div>
+    </section>
+
+    <!-- F. INVESTMENT OPPORTUNITIES -->
+    <section class="section section--white">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="eyebrow">06 · Yield &amp; Capital Horizon</span>
+            <h2 class="section-title">Investment Opportunities</h2>
+            <p class="section-subtitle">High-demand residential assets with estimated rental yields and long-term urban growth fundamentals. Projected figures are estimates, not guaranteed returns.</p>
+          </div>
+          <a href="investment.html" class="link-arrow">Open Investment Hub &#8594;</a>
+        </div>
+        <div class="property-grid" id="home-investment-grid"></div>
+      </div>
+    </section>
+
+    <!-- G. WHY CHOOSE ESTATESPHERE -->
+    <section class="section section--beige">
+      <div class="container">
+        <div class="section-header section-header--center">
+          <span class="eyebrow">07 · The EstateSphere Standard</span>
+          <h2 class="section-title">Why Choose EstateSphere?</h2>
+          <p class="section-subtitle">We replace fragmented listing noise with architectural curation, upfront financial clarity, and cross-border private advisory.</p>
+        </div>
+
+        <div class="pillars-grid">
+          <article class="pillar-card">
+            <div class="pillar-num">01</div>
+            <h3>Upfront Pricing Clarity</h3>
+            <p>Every property presents total asking price, required down payment, remaining balance, and multi-currency conversion alongside the original asking currency.</p>
+          </article>
+          <article class="pillar-card">
+            <div class="pillar-num">02</div>
+            <h3>12 Global Destinations</h3>
+            <p>Seamless access to vetted apartments, flats, villas, and new developments across Europe, the Middle East, North America, Asia, and Oceania.</p>
+          </article>
+          <article class="pillar-card">
+            <div class="pillar-num">03</div>
+            <h3>Financing Intelligence</h3>
+            <p>Built-in down payment, mortgage installment, and investment yield estimators empower confident decision-making before speaking with local lenders.</p>
+          </article>
+          <article class="pillar-card">
+            <div class="pillar-num">04</div>
+            <h3>End-to-End Advisory</h3>
+            <p>From valuation and international buying consultation to legal documentation guidance and ongoing property management under one roof.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- H. CUSTOMER TESTIMONIALS -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header section-header--center">
+          <span class="eyebrow">08 · Client Perspectives</span>
+          <h2 class="section-title">Trusted by Global Homeowners</h2>
+          <p class="section-subtitle">Experiences from international buyers, relocating families, and portfolio investors who acquired residences through EstateSphere.</p>
+        </div>
+        <div class="testimonials-grid" id="home-testimonials-grid"></div>
+      </div>
+    </section>
+
+    <!-- I. CALL-TO-ACTION SECTION -->
+    <section class="section section--compact">
+      <div class="container">
+        <div class="cta-band">
+          <div class="cta-band-bg">
+            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1600&q=80" alt="Luxury residence twilight exterior">
+          </div>
+          <div class="cta-band-inner">
+            <div class="cta-band-copy">
+              <span class="eyebrow eyebrow--light">Private Client Desk</span>
+              <h2>Ready to Acquire or List an Exceptional Residence?</h2>
+              <p>Model your down payment and monthly mortgage estimate, schedule a private consultation, or showcase your property to international buyers.</p>
+            </div>
+            <div class="cta-band-actions">
+              <a href="financing.html" class="btn btn--gold btn--lg">Down Payment Calculator</a>
+              <a href="contact.html" class="btn btn--outline-light btn--lg">Speak With an Advisor</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer-mount"></div>
+
+  <script src="data.js"></script>
+  <script src="state.js"></script>
+  <script src="components.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Residence Details | EstateSphere International Real Estate</title>
+  <meta name="description" content="Detailed specifications, architectural photo gallery, amenities, neighborhood proximity, and interactive down payment calculator.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="property-details">
+  <div id="site-header-mount"></div>
+
+  <main>
+    <section class="section section--compact">
+      <div class="container" id="property-details-mount">
+        <p style="color:var(--ink-secondary);">Loading residence details...</p>
+      </div>
+    </section>
+
+    <section class="section section--beige">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="eyebrow">Curated Recommendations</span>
+            <h2 class="section-title">Similar International Residences</h2>
+          </div>
+          <a href="properties.html" class="link-arrow">Explore All Properties &#8594;</a>
+        </div>
+        <div class="property-grid" id="similar-properties-grid"></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer-mount"></div>
+
+  <script src="data.js"></script>
+  <script src="state.js"></script>
+  <script src="components.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
